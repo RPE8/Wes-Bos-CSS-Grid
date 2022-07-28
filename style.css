@@ -12,8 +12,8 @@ body {
   display: grid;
   width: 900px;
   grid-gap: 10px;
+  grid-template-columns: repeat(5, 1fr);
   border: 10px solid #876445;
-  grid-template-columns: 100px repeat(2, 10px 15px) 50px;
   margin: 40px;
   margin-left: 80px;
 }
@@ -23,4 +23,10 @@ body {
   font-size: 20px;
   text-align: center;
   font-weight: bold;
+}
+
+.item9 {
+  background-color: #ca955c;
+  grid-column: span 6;
+  /* width: 200px; */
 }
