@@ -13,7 +13,7 @@ body {
   width: 900px;
   grid-gap: 10px;
   border: 10px solid #876445;
-  grid-template-columns: auto 1fr auto 1fr;
+  grid-template-columns: 100px repeat(2, 10px 15px) 50px;
   margin: 40px;
   margin-left: 80px;
 }
