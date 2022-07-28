@@ -1,0 +1,24 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #eddfb3;
+}
+
+#container {
+  display: grid;
+  width: 900px;
+  grid-template-columns: 200px auto;
+  grid-template-rows: 200px 50px 50px;
+  grid-gap: 20px;
+}
+
+.item {
+  background-color: #76ba99;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
