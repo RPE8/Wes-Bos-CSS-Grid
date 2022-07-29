@@ -10,12 +10,13 @@ body {
 
 #container {
   display: grid;
-  width: 600px;
+  width: 100%;
   grid-gap: 10px;
   border: 10px solid #876445;
   margin: 40px;
   margin-left: 80px;
-  grid-template-columns: repeat(auto-fill, 50px);
+  /* grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); */
+  grid-template-columns: fit-content(250px) 150px 150px 150px;
 }
 
 .item {
@@ -23,8 +24,4 @@ body {
   font-size: 20px;
   text-align: center;
   font-weight: bold;
-}
-
-.item4 {
-  grid-column: auto / -1;
 }
