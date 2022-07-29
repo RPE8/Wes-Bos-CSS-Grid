@@ -14,9 +14,28 @@ body {
   grid-gap: 10px;
   border: 10px solid #876445;
   margin: 40px;
-  margin-left: 80px;
-  /* grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); */
-  grid-template-columns: fit-content(250px) 150px 150px 150px;
+  grid-template-columns: 1fr 300px 1fr;
+  grid-template-rows: 110px 110px 110px;
+  grid-template-areas:
+    "sidebar-1 content sidebar-2"
+    "sidebar-1 content sidebar-2"
+    "footer footer footer";
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.item1 {
+  grid-area: sidebar-1;
+}
+
+.item2 {
+  grid-area: content;
+}
+
+.item4 {
+  grid-area: sidebar-2;
 }
 
 .item {
