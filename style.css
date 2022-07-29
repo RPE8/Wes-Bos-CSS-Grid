@@ -21,13 +21,13 @@ body {
   grid-gap: 10px;
   border: 10px solid #876445;
   margin: 40px;
-  grid-template-areas:
-    "lol lol 1 1 2 2 2 2"
-    "lol lol 1 1 2 2 2 2"
-    "lol lol 1 1 2 2 2 2"
-    "lol lol 1 1 2 2 2 2";
+  grid-template-columns: [site-left] 1fr [content-start] 300px [content-end] 1fr [site-right];
+  grid-template-rows: [content-top] repeat(10, auto) [content-bottom];
 }
 
 .item3 {
-  grid-column: lol-start / -1;
+  background-color: red;
+  grid-column: content-start;
+  grid-row: content-top / content-bottom;
+  /* grid-row: 1 / span 10; */
 }
