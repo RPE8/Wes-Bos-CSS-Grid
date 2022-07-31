@@ -21,13 +21,82 @@ p {
   margin: 0 0 20px 0;
 }
 
-.close {
-  background: none;
-  color: white;
-  border: 0;
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px);
+  grid-auto-rows: 100px;
+  grid-auto-flow: dense;
 }
 
-.gallery {
+.item {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 1;
+}
+
+.item img {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item__overlay {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  background-color: #eddfb332;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  transition: 0.2s;
+  transform: translateY(100%);
+}
+
+.item:hover .item__overlay {
+  transform: translateY(0);
+}
+
+.item__overlay button {
+  background: none;
+  text-transform: uppercase;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px;
+  border: 2px solid white;
+}
+
+.item.h2 {
+  grid-row: span 2;
+}
+
+.item.w2 {
+  grid-column: span 2;
+}
+
+.item.h3 {
+  grid-row: span 3;
+}
+
+.item.w3 {
+  grid-column: span 3;
+}
+
+.item.h4 {
+  grid-row: span 4;
+}
+
+.item.w4 {
+  grid-column: span 4;
+}
+
+.item.h1 {
+  grid-row: span 1;
+}
+
+.item.w1 {
+  grid-column: span 1;
 }
 
 .overlay {
@@ -38,6 +107,8 @@ p {
   bottom: 0;
   left: 0;
   display: none;
+  align-items: center;
+  justify-items: center;
   z-index: 2;
 }
 
@@ -45,7 +116,7 @@ p {
   display: grid;
 }
 
-.overlay figure {
+.overlay-inner {
   background: white;
   width: 700px;
   padding: 20px;
