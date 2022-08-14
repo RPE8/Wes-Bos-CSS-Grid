@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/style.css" />
-    <link rel="stylesheet" href="./responsive-START.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Responsive Website!</title>
   </head>
 
@@ -113,6 +112,14 @@
       </section>
     </div>
 
-    <script></script>
+    <script>
+      const nav = document.querySelector("menu-list");
+      const button = document.querySelector("button");
+
+      button.addEventListener("click", ({ target }) => {
+        const expanded = target.getAttribute("aria-expanded") === "true";
+        target.setAttribute("aria-expanded", !expanded);
+      });
+    </script>
   </body>
 </html>
