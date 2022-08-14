@@ -21,10 +21,62 @@ a {
   text-decoration: underline wavy var(--yellow);
 }
 
+body {
+  display: grid;
+  place-items: center;
+}
+
 h1,
 h2 {
   font-size: 80px;
   font-style: italic;
   font-weight: 100;
   margin: 0;
+}
+
+.post {
+  max-width: 1000px;
+  display: grid;
+  gap: 10px 50px;
+  grid-template-columns: 3fr 12fr 5fr;
+}
+
+.post > * {
+  grid-column: 2 / -2;
+}
+
+.post > figure {
+  margin: 0;
+  grid-column: 1 / -1;
+}
+
+.post > blockquote {
+  margin: 0;
+  grid-column: 1 / -1;
+  font-size: 60px;
+  font-style: italic;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 10px;
+}
+
+.tip {
+  font-size: 16px;
+  padding: 10px;
+  grid-row: span 2;
+  align-self: start;
+}
+
+.tip.tip-left {
+  border-right: 2px solid var(--yellow);
+  grid-column: 1;
+  text-align: right;
+}
+
+.tip.tip-right {
+  border-left: 2px solid var(--yellow);
+  grid-column: span 1 / -1;
+  text-align: left;
 }
