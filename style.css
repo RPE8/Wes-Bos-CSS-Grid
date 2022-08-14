@@ -1,34 +1,30 @@
-body {
-  width: 90%;
-  /* max-width: 900px; */
-  margin: 2em auto;
-  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+:root {
+  --yellow: #ffc600;
 }
 
-.item {
-  background-color: aquamarine;
-  border: 5px solid tomato;
+html {
+  color: #444;
+  font-family: Cambria, Cochin, Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
 }
 
-.albums {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 20px;
-}
-
-.album {
-  background-color: #eddfb3;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 20px;
-  font-size: 12px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+p {
+  line-height: 1.8;
 }
 
 img {
-  width: 150px;
-  height: 150px;
+  max-width: 100%;
+}
+
+a {
+  color: black;
+  text-decoration: underline wavy var(--yellow);
+}
+
+h1,
+h2 {
+  font-size: 80px;
+  font-style: italic;
+  font-weight: 100;
+  margin: 0;
 }
